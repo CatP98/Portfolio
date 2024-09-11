@@ -1,26 +1,84 @@
-import { createCompleteArray } from './services/githubApi';
-import { fetchFrameworksAndTools, fetchData } from '/js/services/githubApi.js';  
+import { fetchFrameworksAndTools, fetchData } from '/js/services/githubApi.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  console.log("Loading README content...");
+  console.log("Loading repository data...");
 
-  try {
-    const repoDetails = await fetchFrameworksAndTools('CatP98', 'DynamicContainers');
-    
-    if (repoDetails) {
-      console.log('README Content- tools and Frameworks:', repoDetails);
-      // Display or process the README content
-      // document.getElementById('readme-container').textContent = repoDetails.join("\n");
-    } else {
-      console.error('No content found or error fetching README.');
-    }
-  } catch (error) {
-    console.error('Error during README fetch:', error);
+  const LOCAL_STORAGE_KEY = 'repoDetailsData';
+  const storedRepoDetails= localStorage.getItem(LOCAL_STORAGE_KEY);
+
+  let reposDetails;
+
+  if(storedRepoDetails){
+    console.log("Data already stored in local storage cache ", storedRepoDetails );
+    reposDetails = JSON.parse(storedRepoDetails);
+  } else {
+      try{
+        reposDetails = await fetchData('CatP98');
+
+        if(reposDetails){
+          console.log("repositories details: ", reposDetails);
+
+          localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(reposDetails));
+        
+        } else {
+          console.error('No content found or error fetching Repositories.');
+        }
+      } catch (error) {
+        console.error('Error during repository data fetch:', error);
+      }
   }
+  if (reposDetails) {
+    try {
+      // Fetch tools and frameworks for each repository
+      const allReposInfo = await Promise.all(reposDetails.map(async (repo) => {
+        return {
+          name: repo.name,
+          html_url: repo.html_url,
+          languages: repo.languages,
+          frameworksAndTools: await fetchFrameworksAndTools("CatP98", repo.name)
+        };
+      }));
 
-  var apiData= fetchData("CatP98");
-  console.log("rest of the data: " + apiData);
+      console.log("All repository data including technologies:", allReposInfo);
+      
+      // Optionally, store the complete data with technologies in localStorage
+      localStorage.setItem('completeReposData', JSON.stringify(allReposInfo));
 
-  const completeData = createCompleteArray("CatP98");
+      allReposInfo.forEach(repo => createRepoBox(repo));
 
+    } catch (error) {
+      console.error('Error during README fetch or repository data fetch:', error);
+    }
+  }
 });
+
+function createRepoBox(repo){
+  const boxHTML = `
+      <div class="box">
+        <h1>${repo.name}</h1>
+        <div class="project-details">
+          <p><strong>Languages:</strong> ${repo.languages || 'N/A'}</p>
+          <p><strong>Frameworks:</strong> ${repo.frameworksAndTools.frameworks.length ? repo.frameworksAndTools.frameworks.join(', ') : 'N/A'}</p>
+          <p><strong>Tools:</strong> ${repo.frameworksAndTools.tools.length ? repo.frameworksAndTools.tools.join(', ') : 'N/A'}</p>
+        </div>
+      </div>
+    `;
+
+  const box = document.createElement('div');
+  box.innerHTML = boxHTML;
+
+  box.querySelector('.box').addEventListener('click', () => {
+    window.open(repo.html_url, '_blank');
+  })
+
+  const projectDetails = box.querySelector(".project-details");
+  box.querySelector('.box').addEventListener('mouseenter', () => {
+    projectDetails.style.display = 'block';
+  });
+
+  box.querySelector('.box').addEventListener('mouseleave', () => {
+    projectDetails.style.display = 'none';
+  })
+
+  document.querySelector('.box-container').appendChild(box);
+}
