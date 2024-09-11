@@ -19,7 +19,6 @@ async function fetchContent(owner, repoName){
   }
 }
 
-
 async function decodeContent(data){
     const content = atob(data.content);
     console.log(content); 

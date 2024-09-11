@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/assets/montain.jpeg') no-repeat center center;
+    background-size: cover;
+    justify-items: flex-start;
+    top:0px;
+}
+
+header {
+    width: 100%;
+    position: fixed; /* Fix header to stay on top */
+    top: 0; /* Align it to the top */
+    left: 0;
+    z-index: 1000; /* Ensure header is on top of everything */
+    background: rgba(255, 255, 255, 0.1); /* Adjust transparency */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    align-items: flex-start;
+}
+
+#navigation-options {
+    display: flex;
+    gap:30%;
+    width:fit-content;
+    
+}
+
+
+.text {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: fit-content;
+}
+
+
+.text:hover {
+    text-decoration: underline;
+}
+
+.form-search {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.textbox {
+    position: relative;
+    margin-right: 10px;
+}
+
+.textbox input {
+    padding: 10px 40px 10px 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: white;
+}
+
+.textbox i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.button {
+    background: white;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.box {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.7s ease;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+
+}
+
+.box:hover {
+    transform: scale(1.05);
+    backdrop-filter: blur(60px); /* Increase opacity on hover */
+    color: rgb(133, 130, 130); /* Change text color for better readability */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.box a {
+    color: white;
+    text-decoration: none;
+}
+
+.box h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.box p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
