@@ -1,6 +1,7 @@
 import { fetchFrameworksAndTools, fetchData } from '/js/services/githubApi.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
+  localStorage.clear();
   console.log("Loading repository data...");
 
   const LOCAL_STORAGE_KEY = 'repoDetailsData';
@@ -9,8 +10,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   let reposDetails;
 
   if(storedRepoDetails){
-    console.log("Data already stored in local storage cache ", storedRepoDetails );
+    console.log("Data already stored in local storage cache ");
     reposDetails = JSON.parse(storedRepoDetails);
+    console.log("reposDetails",reposDetails);
   } else {
       try{
         reposDetails = await fetchData('CatP98');
