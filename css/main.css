@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} 
 
 body {
     
@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('assets/montain.jpeg') no-repeat center center;
+    background: url('/assets/montain.jpeg') no-repeat center center;
     background-size: cover;
     justify-items: flex-start;
     top:0px;
