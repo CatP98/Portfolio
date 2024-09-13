@@ -1,8 +1,10 @@
-import { fetchFrameworksAndTools, fetchData } from '/js/services/githubApi.js';
+import { fetchFrameworksAndTools, fetchData } from './services/githubApi.js';
+import { addInfiniteScrolling } from './services/infiniteScrolling.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   localStorage.clear();
   console.log("Loading repository data...");
+  
 
   const LOCAL_STORAGE_KEY = 'repoDetailsData';
   const storedRepoDetails= localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -52,6 +54,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       console.error('Error during README fetch or repository data fetch:', error);
     }
   }
+  
+  addInfinitescrolling('.box-container', '.box');
 });
 
 function createRepoBox(repo){

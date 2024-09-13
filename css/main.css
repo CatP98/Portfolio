@@ -104,6 +104,8 @@ header {
     align-items: center;
     margin-top: 30px;
     padding: 0 20px;
+    overflow-y: auto;
+    margin-top: 120px;
 }
 
 .box-container {
@@ -112,6 +114,7 @@ header {
     gap: 20px;
     width: 100%;
     max-width: 1200px;
+    margin: 40px, 20px, 0, 20px;
 }
 
 .box {

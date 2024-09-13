@@ -52,3 +52,5 @@ export function extractNames(content, sectionTitle) {
     }
     return [];
   }
+
+  
