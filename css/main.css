@@ -106,7 +106,6 @@ header {
     font-weight: 500;
     text-align: center;
     color: rgba(0, 0, 0, 0.58);
-    background-color: ;
 }
 
 .button {
@@ -137,9 +136,13 @@ header {
     height: 100vh;
     width: 100%;
     max-width: 1200px;
-    margin: 40px, 20px, 0, 20px;
-    justify-content: space-between;
-    padding-right: 40px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+    flex-wrap: wrap;
+    gap: 70px;
+   
 }
 
 .box {
@@ -148,7 +151,7 @@ header {
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    transition: transform 0.7s ease;
+    transition: all 0.3s ease; 
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     color: white;
@@ -163,7 +166,7 @@ header {
 }
 
 .box:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     backdrop-filter: blur(60px); /* Increase opacity on hover */
     color: rgb(133, 130, 130); /* Change text color for better readability */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -171,6 +174,7 @@ header {
     z-index: 10;
     transform: scale(1.1);
     margin-bottom: 0;
+
 }
 
 .box a {
@@ -182,7 +186,7 @@ header {
     margin-bottom: 10px;
     font-size: 36px;
     text-align: center;
-    text-overflow: ellipsis;
+    word-wrap:break-word; 
 }
 
 .box p {
@@ -206,6 +210,7 @@ header {
     backdrop-filter: blur(10px); 
     color: rgb(133, 130, 130); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
 }
 
 .about h1 {

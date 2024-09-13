@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log("Loading repository data...");
   console.log('1. getting repo details- before call');
 
-  
-  aboutOptionEvent();
-
   const allReposInfo = await getRepositoriesDetails();
   // Create repo boxes after fetching is done
   allReposInfo.forEach(repo => createRepoBox(repo)); // Await the fetching repo details to be finnished, so that only then the search event is set
