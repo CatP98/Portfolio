@@ -15,7 +15,7 @@ export async function filterREADME(content) {
     let repoDetails = [];
 
     // Use regex to match the Frameworks and Tools sections
-    const frameworksSection = content.match(/### Frameworks(.|\n)*?(?=###|$)/);
+    const frameworksSection = content.match(/### Frameworks and Libraries(.|\n)*?(?=###|$)/);
     const toolsSection = content.match(/### Tools(.|\n)*?(?=###|$)/);
 
     // Check if both sections exist
