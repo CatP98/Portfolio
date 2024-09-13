@@ -99,6 +99,16 @@ header {
     font-size: 20px;
 }
 
+.not-found-text{
+    height:fit-content;
+    justify-content: center;
+    margin-top: 100px;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.58);
+    background-color: ;
+}
+
 .button {
     background: white;
     color: black;
@@ -118,6 +128,7 @@ header {
     padding: 0 20px;
     overflow-y: auto;
     margin-top: 120px;
+    position: fixed;
 }
 
 .box-container {
@@ -179,3 +190,77 @@ header {
     color: rgba(255, 255, 255, 0.8);
 }
 
+.cv-img{
+    background-image: 'url("assets/cv.png")'; 
+    background-size: 'cover'; 
+    width : '100%'; 
+    height : 'auto'; 
+}
+
+/* About Section Styling */
+.about {
+    border-radius: 8px; 
+    padding: 2rem; 
+    margin: 2rem 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(10px); 
+    color: rgb(133, 130, 130); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about h1 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #aeacac; /* Dark text color for contrast */
+    margin-bottom: 1rem; /* Space below the heading */
+    justify-self: center;
+}
+
+.about p {
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Increase line height for readability */
+    color: #ddd8d8; /* Gray text color */
+    margin-bottom: 1rem; /* Space below paragraphs */
+}
+
+.about ul {
+    list-style: none; /* Remove default list styling */
+    padding-left: 0; /* Remove default padding */
+}
+
+.about li {
+    background: #fff; /* White background for list items */
+    padding: 1rem; /* Padding inside list items */
+    margin-bottom: 0.5rem; /* Space between list items */
+    border-radius: 4px; /* Rounded corners for list items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about li strong {
+    color: #333; 
+}
+
+.about h1::before {
+    content: ''; /* Add decorative element before heading */
+    display: block;
+    width: 50px; /* Set width */
+    height: 5px; /* Set height */
+    background-color: #71788064; /* Blue color for the line */
+    margin-bottom: 1rem; /* Space between line and heading */
+    border-radius: 2px; /* Rounded edges for the line */
+}
+
+.about-page .form-search {
+    display: none;
+}
+
+/* Apply fade-out effect on the current page */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  /* Apply fade-in effect on the new page */
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+  }

@@ -16,6 +16,7 @@ export async function getRepositories(){
 
             if(reposDetails){
             localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(reposDetails));
+            
         
             }else {
                 console.error('No content found or error fetching Repositories.');

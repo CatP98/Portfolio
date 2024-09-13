@@ -1,4 +1,5 @@
 import { createRepoBox } from "./dynamicElements.js";
+import { resultsNotFound } from "./dynamicElements.js";
 
 function searchInput(input, dataContainer) {
     const trimmedInput = input.trim().toLowerCase(); 
@@ -21,9 +22,10 @@ function searchInput(input, dataContainer) {
 
 function displayBoxes(repos, searchTerms) {
     const container = document.querySelector('.box-container');
-    container.innerHTML = ''; // Clear existing boxes
+    container.innerHTML = ''; 
     if (repos.length === 0) {
-        container.innerHTML = `<p>No results found for: ${searchTerms.join(' ')}.</p>`; 
+        resultsNotFound();
+        //container.innerHTML = `<p>No results found for: ${searchTerms.join(' ')}.</p>`; 
     } else {
         repos.forEach(repo => createRepoBox(repo));
     }
@@ -36,6 +38,8 @@ export function addSearchListener(searchElement, dataContainer) {
         const input = searchBar.value;
         const results = searchInput(input, dataContainer);
         displayBoxes(results);
-        console.log("end search");
+       
     });
 }
+
+
