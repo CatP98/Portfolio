@@ -30,28 +30,30 @@ header {
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     color: white;
-    padding: 20px 40px;
+    padding: 10px 40px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30%;
     text-align: center;
-    align-items: flex-start;
+    flex-wrap:wrap-reverse;
+
+
 }
 
 #navigation-options {
+    padding:20px;
     display: flex;
-    gap:30%;
+    gap:30px;
     width:fit-content;
-    
 }
 
 
 .text {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     width: fit-content;
 }
 
@@ -61,10 +63,12 @@ header {
 }
 
 .form-search {
+    padding:20px;
     display: flex;
     align-items: center;
     align-self: flex-end;
 }
+
 
 .textbox {
     position: relative;
@@ -76,7 +80,15 @@ header {
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.2);
     background: transparent;
-    color: white;
+    color:rgba(0, 0, 0, 0.58)
+}
+
+.textbox input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #a3abb338; 
+    box-shadow: 0 0 5px rgba(179, 203, 228, 0.583); 
+    background-color: rgba(0, 123, 255, 0.047); 
+    color:rgba(0, 0, 0, 0.58);
 }
 
 .textbox i {
@@ -111,11 +123,12 @@ header {
 .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    height: 100vh;
     width: 100%;
     max-width: 1200px;
     margin: 40px, 20px, 0, 20px;
-    gap: 40px;
+    justify-content: space-between;
+    padding-right: 40px;
 }
 
 .box {
@@ -130,7 +143,12 @@ header {
     color: white;
     padding: 30px 40px;
     border-radius: 15px;
-
+    text-overflow: ellipsis;
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+    z-index: 1;
+    text-overflow: ellipsis;
 }
 
 .box:hover {
@@ -138,6 +156,10 @@ header {
     backdrop-filter: blur(60px); /* Increase opacity on hover */
     color: rgb(133, 130, 130); /* Change text color for better readability */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: fit-content;
+    z-index: 10;
+    transform: scale(1.1);
+    margin-bottom: 0;
 }
 
 .box a {
