@@ -129,7 +129,7 @@ header {
     overflow-y: auto;
     margin-top: 120px;
     position: fixed;
-    height: vh;
+    height: 100vh;
 }
 
 .box-container {
