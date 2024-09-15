@@ -1,5 +1,4 @@
 # Portfolio Website
-
 A single-page application (SPA) showcasing my portfolio, including GitHub repositories with details on frameworks, tools, and languages used. The website features search functionality, infinite scrolling, and GitHub OAuth authentication.
 
 ## Table of Contents
@@ -47,8 +46,10 @@ The Portfolio Website is designed to showcase the developer's skills, projects, 
 - **search.js:** Provides search functionality for projects.
 - **main.css:** Styles the application.
 
+### Technologies Used 
 ## Languages
-    -** JavaScript (ES6+)**
+
+- **JavaScript (+ES6)** 
 
 ## Frameworks and Libraries
   - **OAuth:** GitHub OAuth for authentication
@@ -63,6 +64,8 @@ The Portfolio Website is designed to showcase the developer's skills, projects, 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/CatP98/my-portefolio.git```
-   
 
 
+2. **Open index.html in a web browser:**
+
+    Simply open the index.html file in your preferred web browser to view the portfolio website.
