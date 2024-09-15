@@ -69,3 +69,29 @@ The Portfolio Website is designed to showcase the developer's skills, projects, 
 2. **Open index.html in a web browser:**
 
     Simply open the index.html file in your preferred web browser to view the portfolio website.
+
+
+## Future Improvements
+
+- **Enhanced Search Functionality**: Improve search algorithms to handle complex queries and provide more relevant results. Maybe based on the number of searched keys that relate to a repo, the more correspondences the more relavant, and therefore the order of boxes displaying goes accordingly.
+- **Additional Filters**: Add more filtering options for repositories based on stars, forks, or update frequency.
+- **User Authentication**: Integrate user-specific features based on authenticated GitHub users. Finnish the OAuth authentication implementation.
+- **Performance Optimization**: Optimize performance and loading times, especially for large numbers of repositories.
+- **localStorage expiration date**: Create  way of make the localStorage have an expiration date, so that thre's no need to clear it everytime the Home poage is reloaded. 
+- **Background switch per Session**: Make the background change everytime a neew session starts, using the local storage expiration date as reference and a checker.
+- **Work on the modularity structure of the project**: Reduce redundancy and improve the modularity of the project structure.
+- **Testing**
+
+## Problems Encountered
+
+- **API Rate Limits**: Handling GitHub API rate limits during development and production.
+- **OAuth Implementation**: Managing OAuth authentication and securing tokens in a frontend-only environment.
+- **Cross-Origin Resource Sharing (CORS)**: Handling CORS issues when making requests to the GitHub API.
+
+## What I Have Learned
+
+- **API Integration**: Gained experience in integrating and interacting with the GitHub API.
+- **OAuth Authentication**: Learned about OAuth authentication flows and token management in a frontend application.
+- **Asynchronous Programming**: Improved skills in handling asynchronous operations and data fetching.
+- **UI/UX Design**: Enhanced ability to design interactive and user-friendly web interfaces.
+- **Modular JavaScript**: Gained experience in writing modular and maintainable JavaScript code.
