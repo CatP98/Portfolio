@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('../assets/montain.jpeg') no-repeat center center; 
+    background: url('../assets/glaciar.jpeg') no-repeat center center; 
     background-size: cover;
     justify-items: flex-start;
     top:0px;
@@ -135,7 +135,7 @@ header {
 .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    height: 100vh;
+    height: 100%;
     width: 100%;
     max-width: 1200px;
     margin-top: 60px;
@@ -144,7 +144,6 @@ header {
     padding-top: 20vh;
     flex-wrap: wrap;
     gap: 70px;
-   
 }
 
 .box {
