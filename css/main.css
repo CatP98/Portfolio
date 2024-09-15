@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/assets/montain.jpeg') no-repeat center center; 
+    background: url('master/assets/montain.jpeg') no-repeat center center; 
     background-size: cover;
     justify-items: flex-start;
     top:0px;
@@ -38,6 +38,7 @@ header {
     gap: 30%;
     text-align: center;
     flex-wrap:wrap-reverse;
+    min-height: 100px;
 
 
 }
@@ -269,3 +270,19 @@ header {
     opacity: 1;
     transition: opacity 0.5s ease-in;
   }
+
+
+  .auth {
+    padding: 2rem; 
+    margin: 2rem 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(10px); 
+    color: rgb(133, 130, 130); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left: 0;
+    position: fixed;
+    padding-top: 20%;;
+}

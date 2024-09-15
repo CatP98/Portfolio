@@ -63,3 +63,13 @@ export async function aboutContent(){
         <p>I hope you enjoy exploring my work as much as I enjoyed building it!</p>
     `;
 }
+
+export async function letsStart(){
+  const letsStart =  await displayElement('auth');
+  letsStart.innerHTML = `
+        <h1>Welcome to my portfolio website!</h1>
+        <p>This site is a showcase of my skills, projects, and the tools I've worked with as a developer.</p>
+        
+        <p>Click anywhere to start and login with GitHub!</p>
+    `;
+}
