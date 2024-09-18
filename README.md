@@ -46,16 +46,16 @@ The Portfolio Website is designed to showcase the developer's skills, projects, 
 - **search.js:** Provides search functionality for projects.
 - **main.css:** Styles the application.
 
-### Technologies Used 
-## Languages
+## Technologies Used 
+### Languages
 
 - **JavaScript (+ES6)** 
 
-## Frameworks and Libraries
+### Frameworks and Libraries
   - **OAuth:** GitHub OAuth for authentication
   - **Fetch API:** For making HTTP requests to the GitHub API
 
-## Tools
+### Tools
   - **Git:** Version control system
   - **GitHub Pages:** Hosting for the portfolio website
 
